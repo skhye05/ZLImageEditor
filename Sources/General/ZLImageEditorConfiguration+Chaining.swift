@@ -27,14 +27,12 @@
 import UIKit
 
 public extension ZLImageEditorConfiguration {
-    @objc
     @discardableResult
     func editImageTools(_ tools: [ZLImageEditorConfiguration.EditTool]) -> ZLImageEditorConfiguration {
         self.tools = tools
         return self
     }
 
-    @objc
     @discardableResult
     func drawColors(_ colors: [UIColor]) -> ZLImageEditorConfiguration {
         drawColors = colors
