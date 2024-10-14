@@ -27,22 +27,21 @@
 import UIKit
 
 public extension ZLImageEditorConfiguration {
-    @discardableResult
     @objc
+    @discardableResult
     func editImageTools(_ tools: [ZLImageEditorConfiguration.EditTool]) -> ZLImageEditorConfiguration {
         self.tools = tools
         return self
     }
-    
-    @discardableResult
+
     @objc
+    @discardableResult
     func drawColors(_ colors: [UIColor]) -> ZLImageEditorConfiguration {
         drawColors = colors
         return self
     }
     
     @discardableResult
-    @objc
     func defaultDrawColor(_ color: UIColor) -> ZLImageEditorConfiguration {
         defaultDrawColor = color
         return self
