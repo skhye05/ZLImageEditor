@@ -56,7 +56,7 @@ public class ZLImageEditorConfiguration: NSObject {
     /// Edit image tools. (Default order is draw, clip, imageSticker, textSticker, mosaic, filtter)
     /// Because Objective-C Array can't contain Enum styles, so this property is not available in Objective-C.
     /// - warning: If you want to use the image sticker feature, you must provide a view that implements ZLImageStickerContainerDelegate.
-    public var tools: [ZLImageEditorConfiguration.EditTool] {
+     @objc public var tools: [ZLImageEditorConfiguration.EditTool] {
         get {
             if pri_tools.isEmpty {
                 return [.draw, .clip, .imageSticker, .textSticker, .mosaic, .filter, .adjust]
