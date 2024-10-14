@@ -26,6 +26,7 @@
 
 import UIKit
 
+@objcMembers
 public extension ZLImageEditorConfiguration {
     @discardableResult
     func editImageTools(_ tools: [ZLImageEditorConfiguration.EditTool]) -> ZLImageEditorConfiguration {
