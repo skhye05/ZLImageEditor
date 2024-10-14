@@ -27,6 +27,14 @@
 import UIKit
 
 public extension ZLImageEditorConfiguration {
+    @objc
+    @discardableResult
+    func editImageTools(_ tools: [NSNumber]) -> ZLImageEditorConfiguration {
+        // Convert NSNumber to ZLEditTool (the enum)
+        self.tools = tools.compactMap { ZLImageEditorConfiguration.EditTool(rawValue: $0.intValue) }
+        return self
+    }
+    
     @discardableResult
     func editImageTools(_ tools: [ZLImageEditorConfiguration.EditTool]) -> ZLImageEditorConfiguration {
         self.tools = tools
